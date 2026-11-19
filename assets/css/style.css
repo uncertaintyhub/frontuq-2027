@@ -1417,10 +1417,10 @@ section {
 }
 
 #footer a {
-color: #58c;
+  color: #8be;
 }
 #footer a:hover {
-color: #79d;
+  color: #fff;
 }
 
 #footer h3 {
@@ -1466,13 +1466,43 @@ color: #79d;
 }
 
 #footer .copyright {
-  margin: 0 0 5px 0;
+  margin: 10px 0 10px 0;
 }
 
 #footer .credits {
   font-size: 13px;
 }
 
+
+#footer .contact-info {
+font-size: larger;
+margin-bottom: 10px;
+
+}
+
+#footer .organiser-label {
+display: block;       /* Keeps it on its own line */
+margin-bottom: 2px;
+margin-top: 0;
+font-weight: normal;   /* Adjust if you want it bold or normal */
+font-size: larger;
+}
+
+#footer .organiser-list {
+list-style: none;
+padding: 0;
+margin: 0;
+line-height: 1.6;
+}
+
+#footer .organiser-list li {
+display: inline;
+white-space: nowrap;
+}
+
+#footer .organiser-list li:not(:last-child)::after {
+content: " \00B7 ";
+}
 
 /*--------------------------------------------------------------
 # Timeline
@@ -1529,4 +1559,5 @@ color: #79d;
 .bg-subheader-img p {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
+
 

@@ -92,7 +92,7 @@
         </ul>
         Contact:<br>
 	Phone: 0049 3731 39 3225<br>
-	Email: bjoern (dot) sprungk (at) tu-freiberg (dot) de
+	Email: <a href="#" class="secm" data-encoded="ZnJvbnR1cS0yMDI3QHR1LWZyZWliZXJnLmRl"></a>
       </div>
     </section>
 
@@ -101,10 +101,21 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="container">
-      <h3>FrontUQ</h3>
-      <div class="copyright">
-        &copy; Copyright <strong><span>FrontUQ</span></strong>. All Rights Reserved. <a href="legal.html">Legal notice.</a> <a href="privacy_policy.html">Privacy Policy.</a>
-      </div>
+    <div class="contact-info">
+        <!-- Mail Icon SVG -->
+        Contact<br/>
+        <a href="#" class="secm" data-encoded="ZnJvbnR1cS0yMDI3QHR1LWZyZWliZXJnLmRl"></a>
+    </div>
+
+    <div class="organiser-label">Organisers</div>
+    <ul class="organiser-list">
+        <li>Jörg Bendorf (TU BA Freiberg)</li>
+        <li>Oliver Ernst (TU Chemnitz)</li>
+        <li>Christian Gerhards (TU BA Freiberg)</li>
+        <li>Thomas Nagel (TU BA Freiberg)</li>
+        <li>Bj&ouml;rn Sprungk (TU BA Freiberg)</li>
+        <li>Hans-J&ouml;rg Starkloff (TU BA Freiberg)</li>
+    </ul>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
@@ -126,7 +137,13 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script>
+    document.querySelectorAll('.secm').forEach(link => {
+      const address = atob(link.dataset.encoded);
+      link.href = 'mailto:' + address;
+      link.textContent = address;
+    });
+  </script>
 </body>
 
 </html>

@@ -150,8 +150,22 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="container">
-	<h5> Contact: Coming soon</h5>
-	<h6>Organisers: Jörg Bendorf (TU BA Freiberg), Oliver Ernst (TU Chemnitz), Christian Gerhards (TU BA Freiberg), Thomas Nagel (TU BA Freiberg), Bj&ouml;rn Sprungk (TU BA Freiberg), Hans-J&ouml;rg Starkloff (TU BA Freiberg)</h6>
+
+	<div class="contact-info">
+        <!-- Mail Icon SVG -->
+        Contact<br/>
+        <a href="#" class="secm" data-encoded="ZnJvbnR1cS0yMDI3QHR1LWZyZWliZXJnLmRl"></a>
+    </div>
+
+    <div class="organiser-label">Organisers</div>
+    <ul class="organiser-list">
+        <li>Jörg Bendorf (TU BA Freiberg)</li>
+        <li>Oliver Ernst (TU Chemnitz)</li>
+        <li>Christian Gerhards (TU BA Freiberg)</li>
+        <li>Thomas Nagel (TU BA Freiberg)</li>
+        <li>Bj&ouml;rn Sprungk (TU BA Freiberg)</li>
+        <li>Hans-J&ouml;rg Starkloff (TU BA Freiberg)</li>
+    </ul>
       <!-- <h3>FrontUQ</h3> -->
       <div class="copyright">
         &copy; Copyright <strong><span>FrontUQ 2027</span></strong>. All Rights Reserved. <a href="legal.html">Site notice.</a> <a href="privacy_policy.html">Privacy Policy.</a>
@@ -177,6 +191,14 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.querySelectorAll('.secm').forEach(link => {
+      const address = atob(link.dataset.encoded);
+      link.href = 'mailto:' + address;
+      link.textContent = address;
+    });
+  </script>
 
 </body>
 
